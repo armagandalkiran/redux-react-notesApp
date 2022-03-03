@@ -1,38 +1,127 @@
-.App {
-  text-align: center;
+h1 {
+  color:#696969;
+  text-align:center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+ul,li {
+  list-style:none;
+  padding:0;
+  margin:0;
+  text-indent: 0;
+  list-style-type: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+ul{
+  display:flex;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+a{
+  text-decoration: none;
+}
+
+li{
+  padding:0.2rem;
+  margin:0.3rem;
+  width:25px;
+  height:25px;
+  border-radius:50%;
+}
+
+.color-pink{
+  background-color:pink;
+}
+
+.color-purple{
+  background-color:purple;
+}
+
+.color-yellow{
+  background-color:yellow;
+}
+
+.color-blue{
+  background-color:blue;
+}
+
+.color-green{
+  background-color:green;
+}
+
+.selected-color{
+  border:3px solid grey;
+}
+
+.filter-form--container{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:1rem;
+}
+
+.note-form--container{
+  position:relative;
+  display:flex;
+  align-items:center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.note-form-footer--container{
+  position:absolute;
+  display:flex;
+  width:38%;
+  align-items:center;
+  justify-content:space-between;
+  padding:1rem;
+  bottom:0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.textarea-reset{
+  margin:0;
+  padding:0;
+  width: 40%;
+  height:300px;
+  padding:1.4rem;
+  font-size: 24px;
+  resize:none;
+}
+
+.note-list--container{
+  padding: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items:center;
+  justify-content:center;
+}
+
+.note-wrapper{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.note-container{
+  width: 280px;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 1rem;
+  align-items: center;
+  justify-content: flex-start;
+  border: 2px solid #d9c5b2;
+  position: relative;
+  word-wrap:break-word;
+}
+
+.button--submit{
+  background-color:green;
+  color:white;
+  padding:1rem;
+  border:none;
+  border-radius:50%;
+  font-weight: bold;
+}
+
+.button--submit:hover{
+  background-color:rgb(46, 179, 46);
+  cursor:pointer;
 }
