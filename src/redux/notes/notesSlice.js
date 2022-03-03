@@ -17,12 +17,12 @@ export const notesSlice = createSlice({
         state.items.push(action.payload);
         // need to changed for filtering
         if(state.filterText)
-        state.items[state.items.length - 1].note.includes(state.filterText) && state.filtered.push(action.payload);
+        state.items[state.items.length - 1].note.toLowerCase().includes(state.filterText.toLowerCase()) && state.filtered.push(action.payload);
       },
       filterNotes: (state,action) => {
         state.filterText = action.payload;
         if(action.payload) {
-          state.filtered = state.items.filter((item) => item.note.includes(action.payload))
+          state.filtered = state.items.filter((item) => item.note.toLowerCase().includes(action.payload.toLowerCase()))
         } else {
           state.filtered = state.items;
         }
